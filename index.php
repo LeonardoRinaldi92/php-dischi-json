@@ -19,18 +19,39 @@
             </div>
         </header>
         <main>
+            <div v-if="(this.arrayOnScreen != '')" class="overlay">
+                <div class="row h-100">
+                    <div class="col-12 text-end">
+                        <i class="fa-regular fa-rectangle-xmark" @click="this.arrayOnScreen = ''"></i>
+                    </div>
+                    <div class="col-12 d-flex align-items-center justify-content-center h-100">
+                        <div class="inside box text-center text-white">
+                            <img :src="this.arrayOnScreen.poster" style="width: 400px"alt="">
+                            <h1>
+                                {{this.arrayOnScreen.title}}
+                            </h1>
+                            <h3>
+                                {{this.arrayOnScreen.year}}
+                            </h3>
+                            <h2>
+                                {{this.arrayOnScreen.author}}
+                            </h2>
+                        </div>
+                    </div>                   
+                </div>
+            </div>
             <div class="container" style="height: 90vh;">
                 <div class="row align-items-center h-100  justify-content-between">
                     <div v-for="(element,index) in this.arrayDischi"  class="col-4">
                         <div class="card" >
-                            <img :src="element.poster" alt="">
+                            <img :src="element.poster" alt="" @click="this.arrayOnScreen = element">
                             <h5 class="mt-2">
                                 {{element.title}}
                             </h5>
-                            <span>
+                            <span class="desc">
                                 {{element.author}}
                             </span>
-                            <h5>
+                            <h5 class="desc">
                                 {{element.year}}
                             </h5>
                         </div>

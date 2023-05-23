@@ -5,6 +5,7 @@ const { createApp } = Vue
             return {
                 apiUrl: 'apis/server.php',
                 arrayDischi : [],
+                arrayOnScreen : [],
             }
         },
         methods: {

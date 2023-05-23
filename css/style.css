@@ -1,8 +1,18 @@
 body {
     height: 100vh;
     background-color: rgb(29,45,60);
+    position: relative;
+    overflow: hidden;
 }
-
+.overlay {
+    position: absolute;
+    background-color: rgba(17, 32, 48, 0.93);
+    left: 20px;
+    right:20px;
+    top: 20px;
+    bottom: 20px;
+    z-index: 3;
+}
 header {
     height: 10vh;
     background-color: rgb(6,19,31);
@@ -15,14 +25,30 @@ header {
 }
 
 
-
 .col-4 img {
    width: 70%;
+   cursor: pointer;
 }
+
+
+
+.col-4:hover .card {
+    background-color: black;
+}
+
+.col-4:hover img {
+    filter: brightness(1.5);
+    width: 90%;
+}
+
+.col-4:hover .desc {
+    display: none;
+}
+
 
 .card {
     display: flex;
-    width: 80%;
+    max-width: 80%;
     background-color: rgb(17,32,48);
     display: flex;
     align-items: center;
@@ -31,4 +57,22 @@ header {
     border-color: none;
     border: 0px;
     padding: 20px;
+    max-height: 350px;
+}
+
+.desc {
+    display: block;
+}
+
+.fa-rectangle-xmark {
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    color: white;
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.fa-rectangle-xmark:hover {
+    opacity: 1;
 }
