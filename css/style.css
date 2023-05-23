@@ -1,0 +1,31 @@
+body {
+    height: 100vh;
+    background-color: rgb(29,45,60);
+}
+
+header {
+    height: 10vh;
+    background-color: rgb(6,19,31);
+}
+
+.fa-spotify {
+    color: greenyellow;
+    font-size: 3rem;
+    display: inline-block;
+}
+
+.col-4 {
+    height: 300px;
+}
+
+.col-4 img {
+   width: 60%;
+}
+
+.card {
+    display: flex;
+    width: 75%;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+}
