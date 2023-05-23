@@ -24,18 +24,20 @@
                     <div v-for="(element,index) in this.arrayDischi"  class="col-4">
                         <div class="card" >
                             <img :src="element.poster" alt="">
-                            <h5>
+                            <h5 class="mt-2">
                                 {{element.title}}
+                            </h5>
+                            <span>
+                                {{element.author}}
+                            </span>
+                            <h5>
+                                {{element.year}}
                             </h5>
                         </div>
                     </div>
-
                 </div>
-
             </div>
-
         </main>
-
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

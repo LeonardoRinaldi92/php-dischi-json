@@ -14,18 +14,21 @@ header {
     display: inline-block;
 }
 
-.col-4 {
-    height: 300px;
-}
+
 
 .col-4 img {
-   width: 60%;
+   width: 70%;
 }
 
 .card {
     display: flex;
-    width: 75%;
-    background-color: antiquewhite;
+    width: 80%;
+    background-color: rgb(17,32,48);
     display: flex;
     align-items: center;
+    text-align: center;
+    color: white;
+    border-color: none;
+    border: 0px;
+    padding: 20px;
 }
