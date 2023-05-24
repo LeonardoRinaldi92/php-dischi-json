@@ -42,9 +42,9 @@
             </div>
             <div class="container" style="height: 90vh;">
                 <div class="row align-items-center h-100  justify-content-between">
-                    <div v-for="(element,index) in this.arrayDischi"  class="col-4">
+                    <div v-for="(element,index) in this.arrayDischi" :key="index"  class="col-4">
                         <div class="card" >
-                            <img :src="element.poster" alt="" @click="this.arrayOnScreen = element">
+                            <img :src="element.poster" alt="" @click="creaDettagli(index)">
                             <h5 class="mt-2">
                                 {{element.title}}
                             </h5>

@@ -45,6 +45,15 @@ $album = [
     ],
 ];
 
+if ( isset($_POST['numeroArray']) ) {
+  
+  $indice_array = $_POST['numeroArray'];
+  $discoScelto = $album[$indice_array];
+  $albumScelti = $discoScelto;
+  //die(var_dump($discoScelto));
+} else {
+  $albumScelti = $album;
+}
 header('Content-Type: application/json');
 
-echo json_encode( $album );
+echo json_encode( $albumScelti );
