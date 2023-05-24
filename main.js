@@ -10,7 +10,7 @@ const { createApp } = Vue
         },
         methods: {
             chiamataApi () {
-                axios.get ("apis/server.php").then( (res) => {
+                axios.get (this.apiUrl).then( (res) => {
                     this.arrayDischi = res.data;
                 })
             }
